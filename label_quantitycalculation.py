@@ -8,7 +8,7 @@ label_info = ['label name', 'label calculation']
 filename = str(getTime.currentTime())
 
 
-def label_quantitycalculationl():
+def label_quantitycalculation():
     quantitycalculationlist = []
     docs = db.collection(
         u'Label-Domain').where(u'updateTime', u'>', '').stream()
@@ -22,7 +22,7 @@ def label_quantitycalculationl():
             labelIDcount = docTemp['userID']
             count = 0
 
-            # label calculation
+            # label quantity calculation
             for _labelIDcount in labelIDcount:
                 count = count + 1
             label_calculation['label name'] = doc.id
@@ -32,6 +32,6 @@ def label_quantitycalculationl():
 
 
 if __name__ == '__main__':
-    labelquantitycalculationlist = label_quantitycalculationl()
+    labelquantitycalculationlist = label_quantitycalculation()
     list_export_to_csv.list_csv(
         filename, labelquantitycalculationlist, label_info)
