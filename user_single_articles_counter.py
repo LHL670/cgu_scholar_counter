@@ -15,7 +15,7 @@ filename = str(getTime.currentTime() + '_articles_count')
 def articles_countquantitycalculation():
     quantitycalculationlist = []
     docs = list(db.articles.find({}))
-    print(docs)
+    # print(docs)
     for doc in docs:
         calculation = {}
         articles_count = len(doc['Articles'])
