@@ -6,10 +6,10 @@ import json
 cluster = MongoClient(
     "mongodb://reactInterface:reactInterfacepwd@120.126.17.90:27017/CGUScholar?authSource=admin")
 
-db = cluster["CGUScholar"]
+db = cluster["CGUScholar_com"]
 
-info = ['schoalr_name', 'update_count']
-filename = str(getTime.currentTime())
+info = ['schoalr_ID', 'update_count']
+filename = str(getTime.currentTime() + '_label_userID_counter')
 
 
 def scholar_updatequantitycalculation():
